@@ -1,0 +1,940 @@
+/* Enables smooth scrolling for anchor link navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global reset for consistent margin, padding, and box-sizing across all elements */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in element width/height */
+}
+
+/* Header section styling */
+header {
+    background-color: #f4f4f4; /* Light gray background to match Polaroid aesthetic */
+}
+
+/* Removes default list-style for unordered lists */
+li {
+    list-style: none; /* No bullets for list items */
+}
+
+/* Styling for anchor links */
+a {
+    color: rgba(211, 0, 0, 0.9); /* Deep red color to match Polaroid logo */
+    text-decoration: none; /* Removes underline */
+    font-family: 'VT323', 'sans-serif'; /* Retro font style */
+    font-size: 1.6em; /* Larger font size for readability */
+}
+
+/* Makes images responsive, ensuring they don't exceed their container width */
+img {
+    max-width: 100%; /* Ensures image width does not exceed container */
+}
+
+/* Navbar container styling */
+.navbar {
+    min-height: 70px; /* Sets a minimum height for the navbar */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Distributes items evenly across the navbar */
+    align-items: center; /* Centers items vertically */
+    padding: 0 20px; /* Adds horizontal padding */
+    z-index: 9999; /* Ensures navbar is above other elements */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 3em; /* Large font size for emphasis */
+    margin: 0.5em; /* Adds space around the logo */
+}
+
+/* Hover effect for the logo */
+.logo:hover {
+    transition: 0.6s ease; /* Smooth transition */
+    color: #0e0e0e; /* Changes logo color on hover */
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    display: flex; /* Flexbox layout */
+    justify-content: right; /* Aligns the menu to the right */
+    align-items: center; /* Centers items vertically */
+    gap: 60px; /* Adds space between menu items */
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    transition: 0.6s ease; /* Smooth transition */
+    color: #0e0e0e; /* Changes link color on hover */
+}
+
+/* Header styling for all heading elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VT323', sans-serif; /* Custom retro font */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.2em; /* Slightly larger text for readability */
+    font-family: 'VT323', sans-serif; /* Matches the retro font style */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Main heading styling */
+h1 {
+    font-size: 3em; /* Large font size for emphasis */
+    text-align: center; /* Centers the heading */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Hero section styling with a full-screen background */
+.masthead {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    background-image: url("../img/herobackground.jpg"); /* Hero section background image */
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+    background-size: cover; /* Scales the background image to cover the section */
+    height: 95vh; /* Takes up 95% of the viewport height */
+    text-align: center; /* Centers text within the section */
+    color: white; /* White text color for contrast */
+}
+
+/* Hero section heading styling */
+.masthead h1 {
+    color: black; /* Strong contrast with light background */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Adds a white shadow to the text for depth */
+}
+
+/* Shared content section styles */
+.content1, .content2, .content3 {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center; /* Centers the text */
+    font-size: 1.6em; /* Slightly larger font size */
+    padding-top: 20px; /* Adds padding at the top */
+    background-color: #0e0e0e; /* Dark background color for contrast */
+    color: #ef0606; /* Red text color for emphasis */
+}
+
+/* Content section 1 styling */
+.content1 > div:nth-child(2) {
+    background-color: #F5F5DC; /* Polaroid-style beige background */
+    border-radius: 20px; /* Rounded corners for a soft, Polaroid-like effect */
+    padding: 5px; /* Adds inner spacing */
+    margin: 30px; /* Adds space around the content */
+}
+
+/* Link styling inside content section 1 */
+.content1 > div:nth-child(2) > a {
+    color: #0e0e0e; /* Dark text color for readability */
+}
+
+/* Hover effect for links inside content section 1 */
+.content1 > div:nth-child(2) > a:hover {
+    transition: 0.3s ease; /* Smooth transition on hover */
+    color: darkred; /* Changes link color to dark red */
+}
+
+/* Paragraph styling in content section 1 */
+.content1 > div:first-child > p {
+    margin: 10px; /* Adds margin for spacing */
+}
+
+/* Image styling in content section 1 */
+.content1 > div:last-child > img {
+    margin: auto 15px; /* Centers the image with margin on both sides */
+    max-width: 300px; /* Limits the maximum width of the image */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 4px; /* Rounded corners for the image */
+    border: 3px inset #fc0303; /* Adds an inset red border to the image */
+}
+
+/* Content section 2 styling (similar to content1) */
+.content2 > div:nth-child(2) {
+    background-color: #F5F5DC; /* Polaroid-style beige background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px; /* Adds inner spacing */
+    margin: 30px; /* Adds spacing around the section */
+}
+
+/* Link styling inside content section 2 */
+.content2 > div:nth-child(2) > a {
+    color: #0e0e0e; /* Dark text color for links */
+}
+
+/* Hover effect for links inside content section 2 */
+.content2 > div:nth-child(2) > a:hover {
+    transition: 0.3s ease; /* Smooth color transition on hover */
+    color: darkred; /* Dark red color on hover */
+}
+
+/* Paragraph styling inside content section 2 */
+.content2 > div:first-child > p {
+    margin: 10px; /* Adds spacing around the paragraph */
+}
+
+/* Image styling inside content section 2 */
+.content2 > div:last-child > img {
+    margin: auto 15px; /* Centers the image horizontally */
+    max-width: 300px; /* Restricts the image width */
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    border-radius: 4px; /* Rounded corners for the image */
+    border: 3px inset #fc0404; /* Inset red border with a slightly darker shade */
+}
+
+/* Content section 3 styling (similar to content1 and content2) */
+.content3 > div:nth-child(2) {
+    background-color: #F5F5DC; /* Beige background for the Polaroid effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px; /* Inner padding */
+    margin: 30px; /* Outer margin */
+}
+
+/* Link styling inside content section 3 */
+.content3 > div:nth-child(2) > a {
+    color: #0e0e0e; /* Dark link color */
+}
+
+/* Hover effect for links inside content section 3 */
+.content3 > div:nth-child(2) > a:hover {
+    transition: 0.3s ease; /* Smooth transition for hover effect */
+    color: darkred; /* Dark red color when hovered */
+}
+
+/* Paragraph styling inside content section 3 */
+.content3 > div:first-child > p {
+    margin: 10px; /* Adds spacing */
+}
+
+/* Image styling inside content section 3 */
+.content3 > div:last-child > img {
+    margin: auto 15px; /* Centers the image with horizontal margins */
+    max-width: 300px; /* Restricts maximum width */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 4px; /* Rounded corners */
+    border: 3px inset #f51c04; /* Inset border with a unique red shade */
+}
+
+/* Video section container styling */
+.video-section {
+    padding: 40px 20px; /* Inner spacing for video section */
+    background-color: #f4f4f4; /* Light background color */
+    text-align: center; /* Centers text in the video section */
+}
+
+/* Styling for video section title */
+.video-section h2 {
+    font-size: 2em; /* Larger font size for visibility */
+    color: #333; /* Dark color for contrast */
+    margin-bottom: 20px; /* Adds spacing below the title */
+}
+
+/* Video container styling */
+.video-container {
+    max-width: 900px; /* Restricts the container's width */
+    margin: 0 auto; /* Centers the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    overflow: hidden; /* Hides overflow content */
+}
+
+/* Styling for the product video */
+.product-video {
+    width: 100%; /* Ensures the video occupies full width of the container */
+    height: auto; /* Maintains the aspect ratio of the video */
+}
+
+/* Video description container styling */
+.video-description {
+    background-color: #F5F5DC; /* Light beige background to contrast with text */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #0e0e0e; /* Consistent border with product images */
+    max-width: 900px; /* Restricts width of the description */
+    margin: 20px auto; /* Centers the description */
+    text-align: center; /* Centers the text */
+}
+
+/* Text styling inside the video description */
+.video-description p {
+    font-size: 1.2em; /* Slightly larger text for readability */
+    color: #333; /* Dark gray for contrast */
+    line-height: 1.5; /* Increases line height for better readability */
+}
+/* Product 1 (Polaroid 600) Styling */
+
+/* Main product container styling */
+.product-details {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Distributes space evenly between children */
+    align-items: center; /* Centers children vertically */
+    padding: 20px; /* Adds padding inside the container */
+    background-color: #f4f4f4; /* Soft gray background to make the product stand out */
+    margin-top: 20px; /* Adds space above the container */
+}
+
+/* Product images container */
+.product-images {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stacks images vertically */
+    align-items: center; /* Centers images horizontally */
+    gap: 15px; /* Adds space between images */
+}
+
+/* Styling for the figure element inside the product images container */
+.product-images figure {
+    margin: 0; /* Removes default margin */
+    text-align: center; /* Centers text inside the figure */
+}
+
+/* Styling for product images */
+.product-images img {
+    width: 100%; /* Ensures image takes up full width of its container */
+    max-width: 350px; /* Restricts the image width to 350px */
+    height: auto; /* Maintains aspect ratio of the image */
+    border-radius: 10px; /* Rounded corners for a smooth appearance */
+    border: 2px solid #ddd; /* Adds a subtle border around the image */
+    object-fit: cover; /* Ensures image covers the container while maintaining aspect ratio */
+}
+
+/* Styling for image captions */
+.product-images figcaption {
+    font-size: 1.2em; /* Slightly larger font for captions */
+    color: #333; /* Dark gray text for good contrast */
+    margin-top: 10px; /* Adds spacing above the caption */
+}
+
+/* Product information section styling */
+.product-info {
+    max-width: 600px; /* Restricts the maximum width of the information container */
+    padding: 20px; /* Adds inner padding */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to give depth */
+}
+
+/* Styling for product heading and specifications */
+.product-info h3 {
+    font-size: 2em; /* Large heading size for emphasis */
+    color: #333; /* Dark gray text for visibility */
+    margin-top: 20px; /* Adds spacing above the heading */
+    font-family: 'VT323', sans-serif; /* Retro font style to match the theme */
+}
+
+/* Paragraph styling inside the product information section */
+.product-info p {
+    font-size: 1.1em; /* Slightly larger text for readability */
+    line-height: 1.6; /* Increases space between lines for easier reading */
+    color: #555; /* Slightly lighter gray color for paragraph text */
+}
+
+/* Styling for the product price */
+.price {
+    font-size: 2em; /* Larger font size to make the price stand out */
+    color: #d50000; /* Red color for emphasis */
+    margin-top: 20px; /* Adds space above the price */
+    font-weight: bold; /* Makes the price bold for visibility */
+}
+
+/* Styling for buttons */
+.btn {
+    background-color: #d50000; /* Red background for buttons */
+    color: white; /* White text for contrast */
+    padding: 12px 24px; /* Adds padding inside the button */
+    font-size: 1.2em; /* Larger text for better visibility */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers the text inside the button */
+    margin-top: 20px; /* Adds space above the button */
+    display: inline-block; /* Makes the button behave like an inline element */
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #0e0e0e; /* Dark background on hover for contrast */
+}
+
+/* Responsive layout for screens up to 768px */
+@media screen and (max-width: 768px) {
+    /* Adjusts product details layout for smaller screens */
+    .product-details {
+        flex-direction: column; /* Stacks product details vertically */
+        align-items: center; /* Centers product details horizontally */
+    }
+
+    /* Adds margin on top of product info on smaller screens */
+    .product-info {
+        margin-top: 20px;
+    }
+
+    /* Adjusts product title size for smaller screens */
+    .product-title {
+        font-size: 2.5em;
+    }
+
+    /* Reduces the size of the product heading */
+    .product-info h3 {
+        font-size: 1.8em;
+    }
+
+    /* Reduces paragraph font size */
+    .product-info p {
+        font-size: 1em;
+    }
+
+    /* Reduces price font size */
+    .price {
+        font-size: 1.5em;
+    }
+
+    /* Adjusts button size */
+    .btn {
+        font-size: 1em; /* Smaller font size */
+        padding: 10px 20px; /* Adjusts padding */
+    }
+}
+
+/* Further responsive adjustments for screens up to 480px */
+@media screen and (max-width: 480px) {
+    /* Adjusts the product title size for very small screens */
+    .product-title {
+        font-size: 2em;
+    }
+
+    /* Reduces product heading size */
+    .product-info h3 {
+        font-size: 1.5em;
+    }
+
+    /* Reduces paragraph font size */
+    .product-info p {
+        font-size: 0.9em;
+    }
+
+    /* Adjusts price font size */
+    .price {
+        font-size: 1.2em;
+    }
+
+    /* Reduces button font size and padding */
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+/* Footer Styling */
+footer {
+    position: relative; /* Positions the footer relative to the page */
+    bottom: 0; /* Anchors footer to the bottom */
+    width: 100%; /* Full width */
+    background-color: #0e0e0e; /* Dark background color */
+    color: #f4f4f4; /* Light text color for contrast */
+    border-top: 2px solid #f4f4f4; /* Light top border to separate from content */
+}
+
+/* Styling for product title */
+.product_title {
+    font-size: 3em; /* Large font size for emphasis */
+    text-align: center; /* Centers the text */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Centers the content horizontally */
+}
+
+/* Console layout styling */
+.console {
+    display: flex; /* Flexbox for layout */
+    padding: 25px 5px; /* Padding for spacing inside the container */
+    background-color: #0e0e0e; /* Dark background */
+    color: #f4f4f4; /* Light text color */
+}
+
+/* Styling for left section of console */
+.console_left {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    flex-direction: column; /* Stacks content vertically */
+    margin-left: auto; /* Pushes content to the right */
+}
+
+/* Styling for right section of console */
+.console_right {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    flex-direction: column; /* Stacks content vertically */
+    margin-left: auto; /* Pushes content to the right */
+    flex-basis: 50%; /* Assigns 50% of the container's space */
+}
+
+/* Hover effect for links in console's left section */
+.console_left > a:hover {
+    transition: 0.3s ease; /* Smooth transition on hover */
+    color: #f4f4f4; /* Changes link color on hover */
+}
+
+/* First paragraph styling in console's right section */
+.console_right > p:first-child {
+    font-size: 2em; /* Larger font size for emphasis */
+}
+
+/* Styling for product images in console's left section */
+.console_left > img {
+    width: 300px; /* Fixed width for the image */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    border: solid 3px #f4f4f4; /* Light border around the image */
+    object-fit: cover; /* Ensures image fills its container */
+}
+
+/* Price styling */
+.price {
+    color: dodgerblue; /* Bright blue for price emphasis */
+}
+
+/* Polaroid-style effects for images */
+.fig > div > img {
+    width: 100%; /* Makes the image fill the container */
+    height: 100%; /* Makes the image fill the container height */
+    object-fit: cover; /* Ensures image maintains aspect ratio and fills the container */
+    display: block; /* Ensures proper alignment */
+}
+
+/* Styling for figure captions */
+figcaption {
+    font-family: 'VT323', 'sans-serif'; /* Custom retro font */
+    font-size: 1.4em; /* Slightly larger text for readability */
+    color: rgba(211, 0, 0, 0.9); /* Polaroid red color for captions */
+    border-radius: 5px; /* Rounded corners */
+    border: solid 2px #0e0e0e; /* Dark border for contrast */
+}
+
+/* Vertical heading inside figures */
+.fig > div > h4 {
+    background-color: transparent; /* Transparent background */
+    writing-mode: vertical-rl; /* Vertical text alignment */
+}
+
+/* Responsive adjustments for screens up to 768px */
+@media screen and (max-width: 768px) {
+    a {
+        font-size: 1em; /* Smaller font size for links */
+    }
+
+    .logo {
+        font-size: 1.6em; /* Smaller logo size */
+    }
+    .intro > p, .history > div > p {
+        font-size: 1.6em; /* Adjusts paragraph font size for smaller screens */
+    }
+}
+
+/* Responsive adjustments for screens up to 990px */
+@media screen and (max-width: 990px) {
+    .games {
+        flex-direction: column; /* Stacks game elements vertically */
+        text-align: center; /* Centers text */
+        display: flex; /* Flexbox for layout */
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
+    }
+}
+
+/* Further responsive adjustments for screens up to 480px */
+@media screen and (max-width: 480px) {
+    .content1 {
+        font-size: 1.2em; /* Adjusts font size for smaller screens */
+    }
+
+    .content1 > div:last-child > img {
+        max-width: 100px; /* Reduces image size */
+    }
+
+    .content2 {
+        font-size: 1.2em; /* Adjusts font size for content2 */
+    }
+
+    .content2 > div:first-child > img {
+        max-width: 100px; /* Reduces image size */
+    }
+
+    .foot_main {
+        flex-direction: column; /* Stacks footer content vertically */
+    }
+
+    .content3 > h3 {
+        font-size: 5em; /* Increases heading size for better visibility */
+    }
+
+    h4 {
+        font-size: 2em; /* Adjusts font size for h4 */
+    }
+
+    .intro > p, .history > div > p {
+        font-size: 1.2em; /* Increases font size for readability */
+    }
+
+    .history > figure > div > img {
+        max-width: 300px; /* Restricts image size */
+    }
+
+    figcaption {
+        font-size: 0.8em; /* Reduces caption font size */
+    }
+
+    .form_container form {
+        max-width: 400px; /* Restricts form width */
+    }
+}
+
+/* Responsive adjustments for screens up to 420px */
+@media screen and (max-width: 420px) {
+    .navbar {
+        flex-direction: column; /* Stacks navbar elements vertically */
+    }
+
+    .content1 {
+        flex-direction: column; /* Stacks content1 items vertically */
+    }
+
+    .content2 {
+        flex-direction: column; /* Stacks content2 items vertically */
+    }
+}
+
+/* Further adjustments for very small screens (up to 320px) */
+@media screen and (max-width: 320px) {
+    h4 {
+        font-size: 1.8em; /* Adjusts heading size */
+    }
+
+    .intro > p, .history > div > p {
+        font-size: 1em; /* Reduces paragraph font size */
+    }
+
+    .history > figure > div > img {
+        max-width: 250px; /* Restricts image size */
+    }
+
+    .form_container form {
+        max-width: 250px; /* Restricts form width */
+    }
+
+    .input-group input, .input-group textarea, .input-group label {
+        font-size: 1em; /* Adjusts font size for input fields */
+    }
+}
+
+/* Contact Page Design styling */
+.form_container {
+    max-width: 900px; /* Restricts form width */
+    margin: 0 auto; /* Centers the form */
+    padding: 30px; /* Adds inner padding */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    overflow: hidden; /* Hides overflow content */
+}
+
+/* Contact page heading styling */
+h1 {
+    font-size: 2.5em; /* Large heading for emphasis */
+    text-align: center; /* Centers the heading */
+    margin-bottom: 20px; /* Adds spacing below the heading */
+    color: #0e0e0e; /* Dark text color for contrast */
+}
+
+/* Styling for the introductory text on the contact page */
+.intro-text {
+    text-align: center; /* Centers the text */
+    font-size: 1.2em; /* Slightly larger font size */
+    color: #555; /* Medium gray color for text */
+    margin-bottom: 30px; /* Adds spacing below the text */
+}
+/* Input Fields - consistent with website design */
+.input-group {
+    margin-bottom: 20px; /* Adds spacing below each input group */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stacks input fields vertically */
+    font-family: 'VT323', 'sans-serif'; /* Custom retro font */
+}
+
+/* Styling for input labels */
+.input-group label {
+    font-size: 1.1em; /* Slightly larger font size */
+    color: #0e0e0e; /* Dark text color for readability */
+    margin-bottom: 10px; /* Adds space below the label */
+}
+
+/* Styling for input fields and text areas */
+.input-group input,
+.input-group textarea {
+    padding: 10px; /* Adds inner padding for spacing */
+    font-size: 1.2em; /* Larger font size for readability */
+    border: 2px solid #ccc; /* Subtle border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text for contrast */
+    transition: border 0.3s ease; /* Smooth border color change on focus */
+    font-family: 'VT323', 'sans-serif'; /* Retro font */
+}
+
+/* Focused input fields (on focus, changes border color) */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #d50000; /* Red border on focus */
+    outline: none; /* Removes the default outline */
+}
+
+/* Styling for textareas to make them resizable vertically */
+textarea {
+    resize: vertical; /* Allows vertical resizing */
+}
+
+/* Buttons for Submit and Reset */
+.form-buttons {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Distributes space evenly */
+    margin-top: 20px; /* Adds space above the buttons */
+}
+
+/* Styling for submit and reset buttons */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #d50000; /* Red background color */
+    color: white; /* White text for contrast */
+    border: none; /* Removes default border */
+    padding: 10px 20px; /* Adds inner padding */
+    font-size: 1.2em; /* Larger font size for readability */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer to indicate button */
+    transition: border 0.3s ease; /* Smooth border transition on hover */
+    font-family: 'VT323', 'sans-serif'; /* Retro font style */
+}
+
+/* Hover effect for submit and reset buttons */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0e0e0e; /* Dark background on hover */
+}
+
+/* Responsive Design for screens up to 768px */
+@media screen and (max-width: 768px) {
+    /* Adjusts padding inside the form container */
+    .form_container {
+        padding: 20px;
+    }
+
+    /* Adjusts font size for input fields */
+    .input-group input,
+    .input-group textarea {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+
+    /* Changes layout of form buttons */
+    .form-buttons {
+        flex-direction: column; /* Stacks buttons vertically */
+        gap: 10px; /* Adds space between buttons */
+    }
+}
+
+/* About Us Page Styling */
+main {
+    padding: 40px; /* Adds padding inside the main content area */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* About Section Header styling */
+h4 {
+    font-size: 2.5em; /* Larger font size for the header */
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Adds spacing below the header */
+    font-family: 'VT323', sans-serif; /* Custom retro font */
+    color: #0e0e0e; /* Dark text color */
+}
+
+/* Intro Section styling */
+.intro-text {
+    font-size: 1.4em; /* Larger font size for the intro text */
+    color: #555; /* Medium gray color for contrast */
+    text-align: center; /* Centers the text */
+    margin-bottom: 40px; /* Adds space below the section */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* History Section styling */
+.history-section {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    justify-content: space-around; /* Distributes items evenly */
+    gap: 20px; /* Adds space between items */
+    margin-top: 40px; /* Adds space above the section */
+}
+
+/* Styling for individual history cards */
+.fig {
+    flex-basis: 45%; /* Ensures each card takes up 45% of the width */
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Hides overflow content */
+    margin-bottom: 20px; /* Adds spacing below each card */
+    text-align: center; /* Centers text in the card */
+    transition: border 0.3s ease; /* Smooth border transition on hover */
+}
+
+/* Hover effect for history cards */
+.fig:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+/* Image styling inside history cards */
+.fig img {
+    width: 100%; /* Makes the image fill the container width */
+    max-width: 300px; /* Restricts maximum image width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures image covers the container without stretching */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Adds spacing below the image */
+}
+
+/* Caption styling inside history cards */
+figcaption {
+    font-family: 'VT323', sans-serif; /* Custom retro font */
+    font-size: 1.2em; /* Slightly larger text for the caption */
+    color: #0e0e0e; /* Dark text color */
+    padding: 10px; /* Adds padding inside the caption */
+    background-color: #F5F5DC; /* Polaroid-style beige background */
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjusts layout for history section on smaller screens */
+    .history-section {
+        flex-direction: column; /* Stacks the history cards vertically */
+        align-items: center; /* Centers the cards horizontally */
+    }
+
+    .fig {
+        width: 90%; /* Makes history cards wider on smaller screens */
+        margin-bottom: 20px; /* Adds space between cards */
+    }
+
+    .intro-text {
+        font-size: 1.2em; /* Adjusts intro text size */
+    }
+}
+
+/* Models Details Page Styling */
+.models-details {
+    display: flex; /* Flexbox layout for the models section */
+    justify-content: space-between; /* Distributes models evenly */
+    gap: 30px; /* Adds space between models */
+    flex-wrap: wrap; /* Allows models to wrap on smaller screens */
+    padding: 40px; /* Adds padding inside the container */
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/* Styling for model containers */
+.model {
+    background-color: #fff; /* White background for each model */
+    padding: 20px; /* Adds inner padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    width: 280px; /* Fixed width for model containers */
+    text-align: center; /* Centers content inside the model container */
+    margin-bottom: 30px; /* Adds space below each model container */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for models */
+.model:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Styling for model images */
+.model figure {
+    margin: 0; /* Removes default margin */
+}
+
+.model img {
+    width: 100%; /* Makes the image fill the container */
+    max-width: 250px; /* Restricts maximum image width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #d50000; /* Red border around images */
+}
+
+/* Styling for model price */
+.price {
+    font-size: 1.6em; /* Larger font size for the price */
+    color: #d50000; /* Red color for price emphasis */
+    margin-top: 20px; /* Adds space above the price */
+    font-weight: bold; /* Makes the price bold */
+}
+
+/* Styling for model information */
+.model-info {
+    font-family: 'VT323', sans-serif; /* Retro font */
+    margin-top: 20px; /* Adds space above model info */
+}
+
+.model-info p {
+    font-size: 1em; /* Normal font size for model info text */
+    color: #333; /* Dark text for contrast */
+    line-height: 1.5; /* Increases line spacing for readability */
+}
+
+/* Styling for buttons */
+.btn {
+    display: inline-block; /* Makes the button inline-block */
+    background-color: #d50000; /* Red background */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Padding inside the button */
+    font-size: 1.2em; /* Larger font size for visibility */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Removes text underline */
+    text-align: center; /* Centers the text inside the button */
+    margin-top: 20px; /* Adds space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #0e0e0e; /* Dark background on hover */
+}
+
+/* Responsive Layout for screens up to 768px */
+@media screen and (max-width: 768px) {
+    .models-details {
+        flex-direction: column; /* Stacks models vertically */
+        align-items: center; /* Centers models horizontally */
+    }
+
+    .model {
+        width: 100%; /* Makes model containers full width */
+        max-width: 300px; /* Restricts maximum width */
+    }
+}
+
+/* Responsive Layout for screens up to 480px */
+@media screen and (max-width: 480px) {
+    .model {
+        width: 100%; /* Makes models full width */
+        max-width: 100%; /* No maximum width */
+    }
+
+    .price {
+        font-size: 1.4em; /* Adjusts price font size */
+    }
+
+    .model-info p {
+        font-size: 0.9em; /* Reduces font size for smaller screens */
+    }
+
+    .btn {
+        font-size: 1em; /* Adjusts button font size */
+        padding: 10px 20px; /* Adjusts button padding */
+    }
+}

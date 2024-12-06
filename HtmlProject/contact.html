@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"> <!-- Specifies the language of the document as English -->
+<head id="head">
+    <!-- Title of the document displayed in the browser tab -->
+    <title>Polaroid Cameras - Contact Us</title>
+    
+    <!-- Meta tag for page description used by search engines -->
+    <meta name="description" content="Get in touch with Polaroid Cameras support">
+    
+    <!-- Meta tag for defining the character encoding (UTF-8 is a common character set) -->
+    <meta charset="UTF-8">
+    
+    <!-- Meta tag for viewport settings, making the page responsive on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tag for defining the page author -->
+    <meta name="author" content="Polaroid Cameras Team">
+    
+    <!-- Meta tag for keywords related to the content of the page, improving SEO -->
+    <meta name="keywords" content="Polaroid, Contact, Support, Customer Service, Instant Cameras">
+    
+    <!-- Meta tag to specify that search engines should index this page -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- jQuery library for adding interactivity or custom scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Link to external JavaScript file for custom functionality -->
+    <script src="./js/script.js"></script> <!-- Global Script -->
+    
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="./css/style.css"> <!-- Link to existing CSS -->
+    
+    <!-- Open Graph meta tags for improved sharing on social media platforms -->
+    <meta property="og:title" content="Polaroid Cameras - Contact Us">
+    <meta property="og:description" content="Get in touch with Polaroid Cameras support">
+    <meta property="og:image" content="./img/polaroid-contact.jpg"> <!-- Image for social media preview -->
+    <meta property="og:url" content="https://www.polaroidcameras.com/contact-us"> <!-- URL to the Contact Us page -->
+
+    <!-- Twitter Card meta tags for optimized Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Polaroid Cameras - Contact Us">
+    <meta name="twitter:description" content="Get in touch with Polaroid Cameras support">
+    <meta name="twitter:image" content="./img/polaroid-contact.jpg"> <!-- Image for Twitter preview -->
+</head>
+<body>
+    <!-- Global header section for branding/navigation -->
+    <header id="header"></header>
+
+    <!-- Main content of the page -->
+    <main>
+        <!-- Contact Form Section -->
+        <div class="form_container">
+            <!-- Contact page header -->
+            <h1>Contact Us</h1>
+            <!-- Introductory text -->
+            <p class="intro-text">We're happy to help with your queries. Please fill out the form below and our support team will get in touch with you.</p>
+
+            <!-- Contact Form -->
+            <form action="#" method="post" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="437-665-5264">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="reset" class="btn-reset" value="Reset">
+                    <input type="submit" name="submit" value="Send Message" class="btn-submit">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Global footer section for additional information or links -->
+    <footer id="footer"></footer>
+</body>
+</html>
